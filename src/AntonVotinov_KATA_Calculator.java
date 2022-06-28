@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class AntonVotinov_KATA_Calculator {
+public class Main {
     public static void main(String[] args) throws IOException {
 
         String userInputtedString;
@@ -27,7 +27,7 @@ public class AntonVotinov_KATA_Calculator {
             }
 
                 if ((0 <= e) && (e < p))
-                    System.out.println("Expression contains unauthorized characters, please run program again and input correct mathematical expression\n");
+                    throw new IOException();
                 else {
                     int e1 = 0;
                     char[] operands = {'+', '-', '/', '*'};
@@ -41,10 +41,10 @@ public class AntonVotinov_KATA_Calculator {
                     }
 
                     if (e1 == 0) {
-                        System.out.println("Mathematical expression has no operand, please input mathematical expression again\n");
+                        throw new IOException();
                     } else {
                         if (e1 > 1) {
-                            System.out.println("Sorry but mathematical expression has " + e1 + " operands, please input new mathematical expression with only one operand: +,-,* or /\n");
+                            throw new IOException();
                         } else {
                             String[] aAndB = userInputtedString.split("[+\\-*/]");
                             String stringBeforeOperand = aAndB[0];
