@@ -75,7 +75,7 @@ public class Main {
                                             case "VIII": aNum = 8; break;
                                             case "IX": aNum = 9; break;
                                             case "X": aNum = 10; break;
-                                            default: System.out.println("Wrongly inputted mathematical expression IN SWITCH A");
+                                            default: throw new IOException();
                                         }
                                         switch (b) {
                                             case "I": bNum = 1; break;
@@ -88,17 +88,17 @@ public class Main {
                                             case "VIII": bNum = 8; break;
                                             case "IX": bNum = 9; break;
                                             case "X": bNum = 10; break;
-                                            default: System.out.println("Wrongly inputted mathematical expression IN SWITCH B");
+                                            default: throw new IOException();
                                         }
                                         switch (operand) {
                                             case "+": aResult = aNum + bNum; break;
                                             case "-": aResult = aNum - bNum; break;
                                             case "*": aResult = aNum * bNum; break;
                                             case "/": aResult = aNum / bNum; break;
-                                            default: System.out.println("Wrongly inputted mathematical expression (no cases for switch operand method)");
+                                            default: throw new IOException();
                                         }
                                         if (1 > aResult) {
-                                            System.out.println("Sorry but Roman numerals do not have zero or negative numbers, please run program again and input mathematical expression");
+                                            throw new IOException();
                                         } else {
                                             StringBuilder convertedToRoman = new StringBuilder();
                                             while (aResult >= 100) {convertedToRoman.append("C");aResult -= 100;}
@@ -120,12 +120,12 @@ public class Main {
                                             case "-":aResult = aNum - bNum;break;
                                             case "*":aResult = aNum * bNum;break;
                                             case "/":aResult = aNum / bNum;break;
-                                            default:System.out.println("Wrongly inputted mathematical expression (no cases for switch operand method)");
+                                            default: throw new IOException();
                                         }
                                         System.out.println("Result of mathematical expression: " + aResult + "\n");
                                     }
                                 }} else {
-                                System.out.println("Wrongly inputted mathematical expression, please try again");
+                                throw new IOException();
                             }
                         }
                     }
