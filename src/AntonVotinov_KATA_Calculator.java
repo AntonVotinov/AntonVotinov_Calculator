@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class AntonVotinov_KATA_Calculator {
     public static void main(String[] args) throws IOException {
 
         String userInputtedString;
@@ -52,14 +52,14 @@ public class Main {
                             String operand = String.valueOf(userInputtedString.charAt(charsBeforeOperandLength));
                             String a = aAndB[0].trim();
                             String b = aAndB[1].trim();
-                            int aNum = 0;
-                            int bNum = 0;
-                            int aResult = 0;
+                            int aNum;
+                            int bNum;
+                            int aResult;
                             String[] arrOfRoman = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
                             String[] arrOfArabic = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
                             if (Arrays.asList(arrOfArabic).contains(a) && Arrays.asList(arrOfArabic).contains(b) ||
                                     Arrays.asList(arrOfRoman).contains(a) && Arrays.asList(arrOfRoman).contains(b)) {
-                                if (a==null | b==null) {
+                                if (a.equals("") | b.equals("")) {
                                     throw new IOException();
                                 }
                                 else {
