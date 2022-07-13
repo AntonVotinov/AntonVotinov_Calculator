@@ -13,3 +13,4 @@ public class d20220713checkOfSynch {
     }
 }
 // YOLO!!!
+// Why GitHub works so strange?!)
