@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class AntonVotinov_KATA_Calculator {
     public static void main(String[] args) throws IOException {
 
@@ -130,18 +129,13 @@ public class AntonVotinov_KATA_Calculator {
     public static int add(int num1, int num2) {
         return num1+num2;
     }
-
     public static int sub(int num1, int num2) {
         return num1-num2;
     }
-
     public static int mul(int num1, int num2) {
         return num1*num2;
     }
-
-    public static int div(int num1, int num2) {
-        return num1/num2;
-    }
+    public static int div(int num1, int num2) { return num1/num2; }
     public static String getString() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Dear user, please write down the mathematical expression");
